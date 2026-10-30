@@ -121,3 +121,16 @@ Record the repository URL, date checked, and any differences found here before s
 - Start codon position: 1
 - Stop codon position: 4
 - Total complete codons: 4
+
+## 15. Testing and validation
+
+The program was tested using the following cases:
+
+1. Valid DNA sequence: ATGGCTTTTTAA
+2. Valid RNA sequence: AUGGCUUUUUAA
+3. Invalid DNA sequence containing X.
+4. Sequence with incomplete codon at the end.
+5. Sequence containing no start codon.
+6. Sequence containing stop codons.
+
+The tests check sequence validation, RNA conversion, codon translation, start and stop codon identification, and incomplete codon reporting.
