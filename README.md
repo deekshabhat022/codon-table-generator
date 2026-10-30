@@ -91,4 +91,32 @@ Record the repository URL, date checked, and any differences found here before s
 - Treats a stop codon as a displayed translation result rather than stopping the display at that point.
 
 ## 12. Author
-Add your name and course details here before submitting.
+- **Name:** Deeksha Bhat
+- **Course:** MSc Bioinformatics and Biotechnology
+- **University:** Chanakya University, Bengaluru
+- **Project:** Python Assessment 2 – Codon Table Generator
+
+## 13. Additional features and improvements
+
+- Supports both DNA and RNA sequence inputs.
+- Converts RNA nucleotides (U) into DNA nucleotides (T) for translation.
+- Validates nucleotide sequences and identifies invalid characters with their positions.
+- Divides sequences into complete codons of three nucleotides.
+- Reports incomplete codons and leftover nucleotides.
+- Identifies start codons and stop codons with their positions.
+- Displays amino acid frequency for the translated sequence.
+- Provides a translation summary showing the total number of complete codons and amino acid results.
+- Handles empty sequences and invalid nucleotide inputs.
+
+## 14. Example test case
+
+**Input:**
+- Sequence type: DNA
+- Sequence: ATGGCTTTTTAA
+
+**Expected output:**
+- Codons: ATG – GCT – TTT – TAA
+- Amino acids: Methionine – Alanine – Phenylalanine – Stop
+- Start codon position: 1
+- Stop codon position: 4
+- Total complete codons: 4
