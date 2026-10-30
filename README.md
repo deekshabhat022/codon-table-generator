@@ -134,3 +134,21 @@ The program was tested using the following cases:
 6. Sequence containing stop codons.
 
 The tests check sequence validation, RNA conversion, codon translation, start and stop codon identification, and incomplete codon reporting.
+
+## 16. Error handling examples
+
+The program handles different input situations:
+
+### Example 1: Invalid DNA input
+Input: ATGX
+Expected: The program identifies X as an invalid nucleotide and reports its position.
+
+### Example 2: Incomplete codon
+Input: ATGGCTT
+Expected: The program translates ATG and GCT and reports the remaining T as an incomplete codon.
+
+### Example 3: Empty sequence
+Input: Empty sequence
+Expected: The program displays an error message indicating that the sequence cannot be empty.
+
+These examples demonstrate input validation and error handling.
