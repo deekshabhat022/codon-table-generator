@@ -111,6 +111,10 @@ def translate_sequence(sequence, sequence_type):
 
     print("\nCodons:", " - ".join(codons) if codons else "No complete codons")
     print("Amino acids:", " - ".join(amino_acids) if amino_acids else "None")
+    print("\nTRANSLATION SUMMARY")
+    print("-" * 30)
+    print(f"Total complete codons translated: {len(codons)}")
+    print(f"Total amino acid results: {len(amino_acids)}")
     amino_acid_counts = {}
 
     for amino_acid in amino_acids:
