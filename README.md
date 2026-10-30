@@ -79,10 +79,9 @@ Compare the dictionary in `codon_table_generator.py` with a custom codon table i
 5. `TAA`, `TAG`, and `TGA` map to Stop.
 
 Record the repository URL, date checked, and any differences found here before submission:
-
-- Repository/reference checked: **[add URL]**
-- Date checked: **[add date]**
-- Result: **[write what you found; do not claim a comparison until you have actually done it]**
+- Repository/reference checked: https://www.ncbi.nlm.nih.gov/Taxonomy/Utils/wprintgc.cgi
+- Date checked: 30 October 2026
+- Result: Compared the standard genetic code with the codon dictionary used in this project. The standard genetic code contains 64 codons, each consisting of three nucleotides. ATG codes for Methionine, while TAA, TAG, and TGA are stop codons. The codon mappings are consistent with the standard genetic code.
 
 ## 11. Limitations
 - Uses the standard genetic code.
