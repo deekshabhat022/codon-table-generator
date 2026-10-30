@@ -91,10 +91,11 @@ Record the repository URL, date checked, and any differences found here before s
 - Treats a stop codon as a displayed translation result rather than stopping the display at that point.
 
 ## 12. Author
-- **Name:** Deeksha Bhat
-- **Course:** MSc Bioinformatics and Biotechnology
-- **University:** Chanakya University, Bengaluru
-- **Project:** Python Assessment 2 – Codon Table Generator
+
+- Name: Deeksha Bhat
+- Course: MSc Bioinformatics and Biotechnology
+- University: Chanakya University, Bengaluru
+- Project: Python Assessment 2 – Codon Table Generator
 
 ## 13. Additional features and improvements
 
