@@ -107,6 +107,16 @@ def translate_sequence(sequence, sequence_type):
 
     print("\nCodons:", " - ".join(codons) if codons else "No complete codons")
     print("Amino acids:", " - ".join(amino_acids) if amino_acids else "None")
+    amino_acid_counts = {}
+
+    for amino_acid in amino_acids:
+        amino_acid_counts[amino_acid] = amino_acid_counts.get(amino_acid, 0) + 1
+
+    print("\nAMINO ACID FREQUENCY")
+    print("-" * 30)
+
+    for amino_acid, count in sorted(amino_acid_counts.items()):
+        print(f"{amino_acid}: {count}")
 
     start_positions = [i + 1 for i, codon in enumerate(codons) if codon in START_CODONS]
     stop_positions = [i + 1 for i, codon in enumerate(codons) if codon in STOP_CODONS]
