@@ -57,17 +57,26 @@ def display_codon_table():
 def validate_sequence(sequence, sequence_type):
     """Check whether a sequence contains only valid DNA or RNA letters."""
     allowed = VALID_DNA if sequence_type == "DNA" else VALID_RNA
-    invalid_letters = sorted(set(sequence) - allowed)
-    if invalid_letters:
-        letters = ", ".join(invalid_letters)
-        print(f"Invalid input: {letters}")
+
+    invalid_positions = [
+        (index + 1, nucleotide)
+        for index, nucleotide in enumerate(sequence)
+        if nucleotide not in allowed
+    ]
+
+    if invalid_positions:
+        print("Invalid nucleotide(s) found:")
+        for position, nucleotide in invalid_positions:
+            print(f"'{nucleotide}' at position {position}")
+
         print(f"{sequence_type} sequences may contain only {''.join(sorted(allowed))}.")
         return False
+
     if not sequence:
         print("The sequence cannot be empty.")
         return False
-    return True
 
+    return True
 
 def translate_sequence(sequence, sequence_type):
     """Split a sequence into codons and translate complete codons."""
