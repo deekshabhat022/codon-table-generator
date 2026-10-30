@@ -124,11 +124,14 @@ def translate_sequence(sequence, sequence_type):
     print("Stop codon position(s):", stop_positions if stop_positions else "None found")
 
     if leftover:
-        print(f"Warning: incomplete codon at the end: {leftover} (ignored during translation)")
+        print("\nINCOMPLETE CODON INFORMATION")
+        print("-" * 35)
+        print(f"Leftover nucleotides: {leftover}")
+        print(f"Number of leftover nucleotides: {len(leftover)}")
+        print("These nucleotides cannot form a complete codon.")
+        print("They are excluded from amino acid translation.")
     else:
-        print("Incomplete codon at the end: None")
-
-
+        print("\nIncomplete codon at the end: None")
 def main():
     print("CODON TABLE GENERATOR")
     print("Translate a DNA or RNA sequence into amino acids.")
