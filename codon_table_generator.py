@@ -82,6 +82,10 @@ def translate_sequence(sequence, sequence_type):
     """Split a sequence into codons and translate complete codons."""
     # Convert RNA U to DNA T so the same standard table can be used.
     dna_sequence = sequence.replace("U", "T") if sequence_type == "RNA" else sequence
+    if sequence_type == "RNA":
+        print("\nRNA sequence detected.")
+        print("Converting RNA nucleotides (U) to DNA nucleotides (T).")
+        print(f"Converted sequence: {dna_sequence}")
 
     complete_length = len(dna_sequence) - (len(dna_sequence) % 3)
     complete_sequence = dna_sequence[:complete_length]
